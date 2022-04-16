@@ -1,0 +1,22 @@
+后端技术栈
+1、java
+2、spring framework
+3、spring mvc
+4、spring boot
+5、postgresql
+开发工具
+eclipse
+jdk1.8
+maven
+navicat
+xshell
+前端技术栈
+js/css/html
+vue
+react
+axios
+uniapp（移动端）
+开发工具
+vscode
+HBuilderX（移动端）
+
