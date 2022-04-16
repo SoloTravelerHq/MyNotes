@@ -159,3 +159,4 @@
 - 项目经理更新修改
   - git fetch 别名 （将修改同步到远程跟踪分支上）
   - git merge 远程跟踪分支
+  - git pull == git fetch + git merge
