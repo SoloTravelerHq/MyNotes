@@ -79,7 +79,7 @@
 - git branch -d 分支名：删除已合并分支，-D强制删除分支
 - git branch -v：查看每一个分支的最后提交
 - git branch 分支名 提交对象的hash值：创建一个新的分支指向对应的提交对象
-- git log --online --decorate --graph --all：查看项目分叉历史
+- git log --online --decorate：查看项目分叉历史
 - git reflog：查看项目完整操作历史
 - git config --global alias.别名 "指令"：给指令设置别名
 - git merge 分支名：合并其他分支到主分支上
@@ -87,7 +87,7 @@
 - git branch --merge：查看哪些分支已经合并到当前分支
 - git branch --on-merge：查看为合并的分支列表
 - git stash：将当前分支存储到栈当中
-- git satsh：查看存储
+- git stash：查看存储
 - git stash pop：应用储存并立即删掉栈中元素
 - git checkout --文件名：撤销文件修改
   - git reset --hard 提交对象Hash：用指定的提交对象内容重置HEAD 重置暂存区 重置工作目录
@@ -145,7 +145,7 @@
   - 修改用户名 修改邮箱
   - git add
   - git commit
-- 项目经理推送本地仓库到远程仓库
+  - 项目经理推送本地仓库到远程仓库
   - 清理windows凭据
   - git push 别名 分支 （输入用户名 密码；推完之后会附带生成远程跟踪分支）
 - 项目邀请成员
@@ -160,3 +160,8 @@
   - git fetch 别名 （将修改同步到远程跟踪分支上）
   - git merge 远程跟踪分支
   - git pull == git fetch + git merge
+
+### 9、远程分支
+
+- git push 仓库地址 分支名：将分支推送到远程仓库
+- git pull 仓库地址 分支名：合并远程仓库分支
