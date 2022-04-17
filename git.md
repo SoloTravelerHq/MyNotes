@@ -140,16 +140,15 @@
 
 - 项目经理初始化远程仓库
 - 项目经理创建本地仓库
-  - git remote 别名 仓库地址
-  - git init：创建git库，将源码复制进来
+  - git remote add 别名 仓库地址
+  - git init：创建本地仓库，将源码复制进来
   - 修改用户名 修改邮箱
   - git add
   - git commit
-  - 项目经理推送本地仓库到远程仓库
   - 清理windows凭据
   - git push 别名 分支 （输入用户名 密码；推完之后会附带生成远程跟踪分支）
 - 项目邀请成员
-- 成员克隆远程仓库
+- 成员克隆远程仓库：克隆仓库会自动为master做跟踪
   - git clone 仓库地址
 - 成员做出贡献
   - 修改代码
@@ -163,6 +162,38 @@
 
 ### 9、远程分支
 
+- git clone 仓库地址：克隆代码
+
 - git push 仓库地址 分支名：将分支推送到远程仓库
 - git pull 仓库地址 分支名：合并远程仓库分支
 - git push 仓库地址 --delete 分支名：删除远程仓库分支
+
+### 10、做跟踪
+
+- 在使用git push和git pull时需要有远程跟踪分支
+
+- 克隆仓库会自动为master做跟踪
+- 本地没有分支
+  - git checkout -- track 远程跟踪分支(remote/分支名)
+- 本地已经创建了分支
+  - git branch -u 远程跟踪分支
+
+### 10、Pull Request
+
+- 加入或被邀请别人项目修改bug
+  - 找到别人项目的仓库，fork项目到自己的仓库：相当于复制
+  - git clone到本地，修改完bug
+  - 提交到自己的远程仓库，PullRequest回复项目负责人
+- 第二次修改别人bug
+  - 拿到仓库地址
+  - 起别名
+  - 重新跟踪
+    - git fetch 别名(仓库地址)：拉取代码
+    - git branch - u 跟踪分支
+  - git pull
+
+### 11、SSH
+
+- ssh-keygen -t rsa -C 邮箱：生成公钥私钥
+- 将公钥复制到github的SSH中
+- 再ssh协议clone仓库到本地，这样以后该电脑就可以不用输密码访问该项目
